@@ -14,6 +14,7 @@ import org.springframework.test.context.ContextConfiguration;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 @SpringBootTest
 @RunWith(MockitoJUnitRunner.class)
@@ -33,4 +34,5 @@ public class ReservationServiceTest {
 
         Assert.assertEquals(reservationService.getRefundValue(Reservation.builder().schedule(schedule).value(new BigDecimal(10L)).build()), new BigDecimal(10));
     }
+
 }
